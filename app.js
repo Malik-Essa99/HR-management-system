@@ -31,16 +31,14 @@ Employee.prototype.calculateSalary = function () {
     }
 
 }
-
 Employee.prototype.render = function () {
-    document.write(`${this.fullName} ${this.salary} <br>`);
+    document.write(` ${this.fullName} ${this.salary} <br>`);
 }
 function traverseArray() {
     for (let i = 0; i < 7; i++) {
         allEmployees[i].render();
     }
 }
-
 let ghaziSamer = new Employee(1000, "Ghazi Samer", "Administration", "Senior");
 let lanaAli = new Employee(1001, "Lana Ali", "Finance", "Senior");
 let tamaraAyoub = new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
