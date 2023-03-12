@@ -1,14 +1,15 @@
 'use strict'
 let allEmployees = [];
 let newuniqueId = 1000;
-let idcont=1;
+let idcont = 1;
 let uniqueIdArr = [];
 let sectionCardEl = document.getElementById("card");
 let formEl = document.getElementById("EmpInputForm");
 
 /////////////////// Functions ///////////////////
 
-function Employee(employeeFullName,employeeDepartment,employeeLevel,employeeImageUrl,employeeId,employeeSalary) {
+
+function Employee(employeeFullName, employeeDepartment, employeeLevel, employeeImageUrl, employeeId, employeeSalary) {
 
     this.employeeId = employeeId;
     this.employeeFullName = employeeFullName;
@@ -19,10 +20,17 @@ function Employee(employeeFullName,employeeDepartment,employeeLevel,employeeImag
 
     allEmployees.push(this);
 }
+let GhaziSamer = new Employee("Ghazi Samer", "Administration", "Senior", "../assets/Ghazi.jpg");
+let LanaAli = new Employee("Lana Ali", "Finance", "Senior", "../assets/Lana.jpg");
+let TamaraAyoub = new Employee("Tamara Ayoub", "Marketing", "Senior", "../assets/Tamara.jpg");
+let SafiWalid = new Employee("Safi Walid", "Administration", "Mid-Senior", "../assets/Safi.jpg");
+let OmarZaid = new Employee("Omar Zaid", "Development", "Senior", "assets/Omar.jpg");
+let RanaSaleh = new Employee("Rana Saleh", "Development", "Junior", "assets/Rana.jpg");
+let HadiAhmad = new Employee("Hadi Ahmad", "Finance", "Mid-Senior", "assets/Hadi.jpg");
 
 Employee.prototype.UniqueId = function () {
 
-    this.employeeId = (newuniqueId+idcont);
+    this.employeeId = (newuniqueId + idcont);
     idcont++;
 
 }
@@ -56,42 +64,32 @@ function submitHandler(event) {
     let lvl = event.target.Emplvl.value;
     let imgUrl = event.target.EmpImgurl.value;
 
-    let newEmployee = new Employee(name,dept,lvl,imgUrl);
+    let newEmployee = new Employee(name, dept, lvl, imgUrl);
     newEmployee.render();
 }
 
 /////////////////// Render function ///////////////////
 
 Employee.prototype.render = function () {
+
     let divEl = document.createElement('div');
-    divEl.className ='divInfo';
+    divEl.className = 'divInfo';
+
     sectionCardEl.appendChild(divEl);
 
     let imgEl = document.createElement('img');
     imgEl.src = this.employeeImageUrl;
-    
+
     this.netSalary();
     this.UniqueId();
-    
+
     divEl.textContent = `Name: ${this.employeeFullName} -- ID: ${this.employeeId} --  Department: ${this.employeeDepartment} -- Level: ${this.employeeLevel} -- Salary:${this.employeeSalary}`;
     divEl.appendChild(imgEl);
-    
+
 }
-
-/////////////////// Old render function ///////////////////
-
-// Employee.prototype.render = function () {
-//     this.calculateSalary();
-//     this.netSalary();
-//     document.write(` ${this.employeeFullName} ${this.salary} <br>`);
-// }
-
-// function traverseArray() {
-//     for (let i = 0; i < 7; i++) {
-//   this.calculateSalary();
-//     this.netSalary();
-//         allEmployees[i].render();
-//     }
-// }
-
-//traverseArray();
+function traverseArray() {
+    for (let i = 0; i < 7; i++) {
+        allEmployees[i].render();
+    }
+}
+traverseArray();
