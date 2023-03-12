@@ -8,6 +8,8 @@
     <title>HR-management-system</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
 </head>
 
 <body>
@@ -20,7 +22,38 @@
         </div>
     </header>
     <main>
-        <script src="./app.js"></script>
+        <!-- <img src="./assets/user2m.png" alt=""> -->
+        <div>
+        <form id="EmpInputForm">
+            <label for="EmpName">Enter Your Full Name:</label>
+            <input type="text" name="" id="EmpName"><br>
+
+            <label for="EmpDepartment">Select your department:</label>
+            <select name="Department" id="EmpDepartment">
+                <option value="Administration">Administration</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Development">Development</option>
+                <option value="Finance">Finance</option>
+            </select><br>
+
+            <label for="Emplvl">Select your level:</label>
+            <select name="Level" id="Emplvl">
+                <option value="Junior">Junior</option>
+                <option value="Mid-Senior">Mid-Senior</option>
+                <option value="Senior">Senior</option>
+            </select><br>
+
+            <label for="EmpImgurl">Enter an Image Url:</label>
+            <input type="text" name="" id="EmpImgurl" value=""><br>
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <div id ="cardItems">
+        <section id="card">
+        </section>
+    </div>
+    <script src="./app.js"></script>
     </main>
     <footer>
 
