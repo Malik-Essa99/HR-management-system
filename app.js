@@ -20,10 +20,10 @@ function Employee(employeeFullName, employeeDepartment, employeeLevel, employeeI
 
     allEmployees.push(this);
 }
-let GhaziSamer = new Employee("Ghazi Samer", "Administration", "Senior", "../assets/Ghazi.jpg");
-let LanaAli = new Employee("Lana Ali", "Finance", "Senior", "../assets/Lana.jpg");
-let TamaraAyoub = new Employee("Tamara Ayoub", "Marketing", "Senior", "../assets/Tamara.jpg");
-let SafiWalid = new Employee("Safi Walid", "Administration", "Mid-Senior", "../assets/Safi.jpg");
+let GhaziSamer = new Employee("Ghazi Samer", "Administration", "Senior", "assets/Ghazi.jpg");
+let LanaAli = new Employee("Lana Ali", "Finance", "Senior", "assets/Lana.jpg");
+let TamaraAyoub = new Employee("Tamara Ayoub", "Marketing", "Senior", "assets/Tamara.jpg");
+let SafiWalid = new Employee("Safi Walid", "Administration", "Mid-Senior", "assets/Safi.jpg");
 let OmarZaid = new Employee("Omar Zaid", "Development", "Senior", "assets/Omar.jpg");
 let RanaSaleh = new Employee("Rana Saleh", "Development", "Junior", "assets/Rana.jpg");
 let HadiAhmad = new Employee("Hadi Ahmad", "Finance", "Mid-Senior", "assets/Hadi.jpg");
