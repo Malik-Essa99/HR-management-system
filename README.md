@@ -1,3 +1,4 @@
+
 # HR-management-system
 
 #in this update I created a new Listener/EventHandler an event handler  that takes input from a form elemt and prints the output information in a card that is basically a div element.
@@ -13,6 +14,7 @@
 
 #Added style to the header and footer font from google
 
+
 #Made some changes on app.js in which the new employee cards that are created by form no longer disappear upon refresh.
 
 created a function on accounting.js file that renders a table, all the information are from localStorage and the table displays:
@@ -21,5 +23,4 @@ created a function on accounting.js file that renders a table, all the informati
 -Summation of employees salaries in each department
 -the average salary for each department
 -a table footer that display the total for each column
-
 
