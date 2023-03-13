@@ -14,6 +14,13 @@
 
 #Added style to the header and footer font from google
 
-#This project is an HR-management-system where a company can review employees information
-#This is the initial update, created two pages Home & accounting added app.js file as a constructor to show on home page employee info(Full name and salary)
+
+#Made some changes on app.js in which the new employee cards that are created by form no longer disappear upon refresh.
+
+created a function on accounting.js file that renders a table, all the information are from localStorage and the table displays:
+
+-The total number of employees in each department
+-Summation of employees salaries in each department
+-the average salary for each department
+-a table footer that display the total for each column
 
